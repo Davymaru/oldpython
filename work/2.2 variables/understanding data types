@@ -1,0 +1,14 @@
+x = 80
+print("Lit:",x)
+
+y = -600
+print("int:",y)
+
+z = 99.99
+print("float:",z)
+
+name = "Pierson"
+print("string:",name)
+      
+is_active = True
+print("bool:", is_active)
