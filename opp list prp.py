@@ -1,16 +1,29 @@
-# buy everything
-needed_list= ["Apples", "Lettuce", "Bread", "Milk", "Peanut Butter"]
+seats = ["1E", "2E", "3E", "4E", "5E", "1D", "2D", "3D", "4D", "5D", "1C", "2C", "3C", "4C", "5C", "1B", "2B", "3B", "1A", "2A", "3A"]
 
-got_it = "ice cream"
-while got_it != "purchased":
-    # display list
-    for item in needed_list:
-        print (item)
+seat = ""
+while seat != "done":
+    print ("\n\nyou can even buy multipul tickes so when you are finshed purching please type '0'\nThe following seats are avaible:")
+    for seat in seats:
+        print (seat)
 
-    got_it = input("\nPlease enter the item that you have gotten from the list:  ")
-    if got_it in needed_list:
-        needed_list.remove(got_it)
 
-if len(needed_list) == 0:
-    print("you are done!")
-    got_it = "done"
+
+    seat = input("\nPlease enter the seats you want: ")
+    if seat in seats:
+        seats.remove(seat)
+    elif seat == '0':
+        print("Thank you for your purchase!")
+        seat = "done"
+    else:
+        print("Sorry thats not an avaible seat, please try again!")
+
+
+
+
+
+
+
+
+
+
+
