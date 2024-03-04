@@ -1,31 +1,62 @@
-# sales tax calculator to demonstrate scope
+POUNDS_TO_KG = 0.453592
 
-# Global variable declaration
-global tax_rate
-tax_rate = 0.07  # Set the global tax rate to 7%
+INCHES_TO_METERS = 0.0254
 
-# Function to calculate tax based on the price
-def calculate_tax(price):
-    # 'tax' is a local variable inside this function.
-    # It uses the global variable 'tax_rate' to calculate the tax.
-    tax = price * tax_rate
-    return tax  # Returns the calculated tax value.
 
-# Function to calculate the total price (price + tax)
-def calculate_total(price):
-    # 'total' is a local variable in this function.
-    # It calls 'calculate_tax' to compute the tax and adds it to the original price.
-    total = price + calculate_tax(price)
-    return total  # Returns the total price after adding the tax.
 
-# Main part of the program
+def calculate_bmi(weight, height):
 
-# Input from user, converted to float (decimal number)
-price = float(input("Enter a price: "))
 
-# Calls 'calculate_total' function and formats the output to 2 decimal places
-# The formatted string is displayed to the user
-print(f"The total price is ${calculate_total(price):,.2f}")
+    return weight / (height ** 2)
 
-# Displays the tax rate by converting it to a percentage and formatting to 2 decimal places
-print(f"The tax rate is {(tax_rate * 100):,.2f}%")
+
+
+def get_user_input(prompt):
+
+    while True:
+        try:
+            user_input = float(input(prompt))
+            if user_input <= 0:
+                print("enter a positive value.")
+                continue
+            return user_input
+        except ValueError:
+            print("enter a valid numerical value.")
+
+
+
+def bmi_category(bmi):
+
+
+
+    if bmi < 18.5:
+        return 
+    elif 18.5 <= bmi < 25:
+        return
+    elif 25 <= bmi < 30:
+        return 
+    else:
+        return 
+
+
+def main():
+
+
+
+    weight_lbs = get_user_input("Enter your weight in pounds: ")
+
+    height_inches = get_user_input("Enter your height in inches: ")
+
+    weight_kg = weight_lbs * POUNDS_TO_KG
+
+    height_m = height_inches * INCHES_TO_METERS
+
+    bmi = calculate_bmi(weight_kg, height_m)
+
+    category = bmi_category(bmi)
+
+    print(f"Your BMI is: {bmi:.2f}")
+
+    print(f"You are categorized as: {category}")
+
+main()
