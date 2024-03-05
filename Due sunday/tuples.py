@@ -1,17 +1,16 @@
 def main():
-    months = ("January", "February", "March", "April", "May", "June", "July", "August", 
-              "September", "October", "November", "December")
+
+    programming_classes = ('Intro to Python', 'Advanced Python', 'Database Essentials', 'Web Development Basics', 'Data Structures in Python','Web Design Fundamentals')
     
-    for month in months:
-        print(month, end = "  ")
+  
+    print("Classes:")
     
-    print(f"\nThere are :  {len(months)} months in  a year")
-    summer = []
-    summer = months[4:7]
-    print("Summer includes: ")
-    for month in summer:
-        print(month, end= "  ")
-    print("\n\n")
+    for course in programming_classes:
+     
+        print(course)
+    
+
+    print("\nTotal number of classes:", len(programming_classes))
 
 
 main()
