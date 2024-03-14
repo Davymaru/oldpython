@@ -1,6 +1,6 @@
-import random
 
 def main():
+    import random
     try:
         target_number = random.randint(1, 100)
 
@@ -27,5 +27,5 @@ def main():
     except ValueError:
         print("Please enter a valid number.")
 
-if __name__ == "__main__":
-    main()
+
+main()
