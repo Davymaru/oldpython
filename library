@@ -1,0 +1,23 @@
+def main():
+    
+    def book_titles():
+       
+        titles = []
+        count = 0
+
+        while count < 10:
+            title = input("Enter book title: ")
+            titles.append(title.title())  
+            count += 1
+        return titles
+
+    listed_book_titles = book_titles()
+
+    sorted_list = sorted(listed_book_titles) 
+
+    print("Sorted Book Titles:")
+    
+    for title in sorted_list:
+        print(title)
+
+main()
