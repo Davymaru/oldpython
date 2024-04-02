@@ -1,0 +1,26 @@
+def main():
+
+
+    
+    top_artists = ["Metallica", "Megadeth", "Slayer", "Anthrax", "Pantera", "Testament", "Avenged sevenfold", "The Misfits", "Nine Inch Nails", "Olivia Rodrigo"]
+
+    def replace_artist():
+        try:
+            index = int(input("Enter the number of the artist you want to replace: "))
+
+            if index < 0 or index >= len(top_artists):
+                raise IndexError
+            new_artist = input("Enter the name of the new artist: ")
+
+            top_artists[index] = new_artist
+
+            print("Artist replaced:).")
+        except (ValueError, IndexError):
+
+            print("An input error occurred.")
+
+    replace_artist()
+
+    print(top_artists)
+
+main()
