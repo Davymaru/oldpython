@@ -4,6 +4,7 @@ def main():
     
     top_artists = ["Metallica", "Megadeth", "Slayer", "Anthrax", "Pantera", "Testament", "Avenged sevenfold", "The Misfits", "Nine Inch Nails", "Olivia Rodrigo"]
 
+    print(top_artists)
     def replace_artist():
         try:
             index = int(input("Enter the number of the artist you want to replace: "))
