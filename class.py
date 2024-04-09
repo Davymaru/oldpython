@@ -1,68 +1,107 @@
-"""
-    creating our first class
-"""
-
-# Class definition for a Student
-
-
-class Student:
-    # Initializer with private variables
-    def __init__(self, first_name, last_name, studentID, year):
-        self.__first_name = first_name  # Private variable for first name
-        self.__last_name = last_name    # Private variable for last name
-        self.__studentID = studentID    # Private variable for student ID
-        self.__year = year              # Private variable for academic year
-
-     # Method to get student's info as a formatted string
-    def get_info(self):
-        return f"{self.__first_name} {self.__last_name}, ID: {self.__studentID}, Year: {self.__year}"
-
-      # Getter for first_name
-    def get_first_name(self):
-        return self.__first_name
-
-    # Getter for last_name
-    def get_last_name(self):
-        return self.__last_name
-
-    # Getter for studentID
-    def get_studentID(self):
-        return self.__studentID
-
-    # Getter for year
-    def get_year(self):
-        return self.__year
-
-    # Setter for first_name
-    def set_first_name(self, first_name):
-        self.__first_name = first_name
-
-    # Setter for last_name
-    def set_last_name(self, last_name):
-        self.__last_name = last_name
-
-    # Setter for studentID
-    def set_studentID(self, studentID):
-        self.__studentID = studentID
-
-    # Setter for year
-    def set_year(self, year):
-        self.__year = year
-
-
 def main():
-    student1 = Student("John", "Doe", "123456", "Sophomore")
-    student2 = Student("Jane", "Smith", "789012", "Freshman")
+    class Person:
+        def __init__(self, name, address, age, phone_number):
+            self.__name = name
 
-    print("\n\n\n\n")
-    print(student1.get_info())
-    print(student2.get_info())
-    print("\n\n\n\n")
+            self.__address = address
 
-    student2.set_first_name("Buffy")
-    student2.set_last_name("Summers")
-    student2.set_studentID("123666")
-    print(student2.get_first_name())
+            self.__age = age
+
+            self.__phone_number = phone_number
+
+       
+        def get_name(self):
+            return self.__name
+
+
+        def get_address(self):
+            return self.__address
+
+
+        def get_age(self):
+            return self.__age
+
+
+        def get_phone_number(self):
+            return self.__phone_number
+
+        
+        
+
+
+        def set_name(self, name):
+            self.__name = name
+
+        def set_address(self, address):
+            self.__address = address
+
+        def set_age(self, age):
+            self.__age = age
+
+        def set_phone_number(self, phone_number):
+            self.__phone_number = phone_number
+
+
+
+
+
+    person1 = Person("Joe Mama", "123 Maama St, TOWNTOWN", 900000, "708-555-1234")
+
+    person2 = Person("Jar Jar Binks", "500, Gungan city", 87, "815-333-5678")
+
+    person3 = Person("Ash Ketchum", "300, Pallet town", 10, "319-444-9101")
+
+
+
+
+
+    print("Person 1:")
+
+    print("Name:", person1.get_name())
+
+    print("Address:", person1.get_address())
+
+    print("Age:", person1.get_age())
+
+    print("Phone Number:", person1.get_phone_number())
+
+    print()
+
+
+
+
+    print("Person 2:")
+
+    print("Name:", person2.get_name())
+
+    print("Address:", person2.get_address())
+
+    print("Age:", person2.get_age())
+
+    print("Phone Number:", person2.get_phone_number())
+
+    print()
+
+
+
+
+    print("Person 3:")
+
+    print("Name:", person3.get_name())
+    
+    print("Address:", person3.get_address())
+
+    print("Age:", person3.get_age())
+
+    print("Phone Number:", person3.get_phone_number())
+
+
+
+
+
+
+
+
 
 
 main()
