@@ -1,0 +1,32 @@
+class NotNumericError(Exception):
+
+    pass
+
+
+def main():
+
+    try:
+        user_input = input("enter a number: ")
+
+        if not user_input.isnumeric():
+
+            raise NotNumericError("Invalid input. enter a valid number.")
+        
+    except NotNumericError as e:
+
+        print(f"Error: {e}")
+
+        main()  
+
+    else:
+
+        print("Input is valid.")
+
+    finally:
+
+        print("End of program .")
+
+
+
+
+main()
